@@ -5,11 +5,13 @@
 3. type ``npm install`` to install necessary files. Wait.
 4. You're done :)
 
-# Deployment
+# Previewing the Site (locally)
 1. Pull contents of repo, cd into directory and ``npm install`` to update any new files, if necessary
-2. ``npm run deploy``
-3. Wait.
-4. Done
+2. Make whatever changes you ned
+3. ``npm start``
+4. Wait for the site to open up in your browser.
+
+If everything looks right, feel free to push the contents to main. 
 
 # Editing Contents
 
@@ -17,4 +19,4 @@ As of now, the various albums can be edited in ``albumsInfo.js`` and members in 
 
 No support for featured album editing yet, since it's a bit custom. It supports plain text, but let me know if you'd like Markdown support, because that shouldn't be too hard to implement. 
 
-Most of the fields are self explanatory. The files for ANY asset should be stored in the ``public`` folder, and the filepath should always start with `./`. Not `/`. This is to ensure the images load properly when deployed.
+Most of the fields are self explanatory. The files for ANY asset should be stored in the ``public`` folder~~, and the filepath should always start with `./`. Not `/`. This is to ensure the images load properly when deployed.~~ NOTE: Might not be necessary on Cloudflare Pages now.

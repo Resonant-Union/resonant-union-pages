@@ -9,15 +9,14 @@ import { Reel } from "./pages/reel";
 
 export default function App() {
   return (
-      <Routes>
-        <Route path="/" element={<Root />}>
-          <Route index element={<Home />} />
-          <Route path="albums" element={<Albums />} />
-          <Route path="members" element={<Members />} />
-          <Route path="contact" element = {<Contact/>}/>
-          <Route path = "reel" element = {<Reel/>}/>
-          {/* <Route path="*" element={<NoMatch />} /> */}
-        </Route>
-      </Routes>
+    <Routes>
+      <Route path="/" element={<Root />}>
+        <Route index element={<Home />} />
+        <Route path="albums" element={<Albums />} />
+        <Route path="members" element={<Members />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="reel" element={<Reel />} />
+      </Route>
+    </Routes>
   );
 }

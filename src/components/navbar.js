@@ -10,7 +10,7 @@ const NavbarDesktop = () => {
     return <div className="w-full text-white">
         <div className="flex flex-row items-center justify-end mx-16 py-6 gap-4 text-lg font-pixelify">
             {pages.map((page, index) => {
-                return <JrpgGradientButton><Link to={page.path}>{page.label}</Link></JrpgGradientButton>
+                return <Link to={page.path}><JrpgGradientButton>{page.label}</JrpgGradientButton></Link>
             })}
             <img className="w-12 h-12" src="./RU.png" alt="RU logo" />
         </div>
@@ -24,7 +24,7 @@ const NavbarMobile = () => {
     return <div className="w-full text-white">
         <div className={`grid ${isNotTablet ? "grid-cols-2" : "grid-cols-4"} text-center items-center justify-center px-3 py-4 gap-2 font-pixelify text-sm`}>
             {pages.map((page, index) => {
-                return <JrpgGradientButton><Link to={page.path}>{page.label}</Link></JrpgGradientButton>
+                return <Link to={page.path}><JrpgGradientButton>{page.label}</JrpgGradientButton></Link>
             })}
         </div>
     </div>

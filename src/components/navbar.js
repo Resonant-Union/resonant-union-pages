@@ -21,13 +21,14 @@ const NavbarDesktop = () => {
 }
 
 const NavbarMobile = () => {
+    const basePath = useBasePath();
 
     const isNotTablet = useMediaQuery({ query: '(max-width: 500px)' })
 
     return <div className="w-full text-white">
         <div className={`grid ${isNotTablet ? "grid-cols-2" : "grid-cols-4"} text-center items-center justify-center px-3 py-4 gap-2 font-pixelify text-sm`}>
             {pages.map((page, index) => {
-                return <Link to={page.path}><JrpgGradientButton>{page.label}</JrpgGradientButton></Link>
+                return <a href={basePath + "/" + page.path}><JrpgGradientButton>{page.label}</JrpgGradientButton></a>
             })}
         </div>
     </div>
